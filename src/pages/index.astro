@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 
+const base = import.meta.env.BASE_URL;
+
 const links = {
   github: "https://github.com/Theseus-427",
   scholar: "https://scholar.google.com/citations?user=2k6kUakAAAAJ&hl=zh-CN",
@@ -164,12 +166,12 @@ const skills = [
     <div class="site-shell">
       <header class="topbar">
         <nav class="nav" aria-label="Primary navigation">
-          <a class="brand" href="/">Haojun Shi</a>
+          <a class="brand" href={base}>Haojun Shi</a>
           <div class="nav-links">
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
-            <a href="/projects/">Projects</a>
-            <a href="/cv/">CV</a>
+            <a href={`${base}projects/`}>Projects</a>
+            <a href={`${base}cv/`}>CV</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
           </div>
@@ -211,8 +213,8 @@ const skills = [
               </div>
               <div class="actions" aria-label="Profile links">
                 <a class="button primary" href="#publications">View Publications</a>
-                <a class="button" href="/cv/">CV</a>
-                <a class="button" href="/projects/">Projects</a>
+                <a class="button" href={`${base}cv/`}>CV</a>
+                <a class="button" href={`${base}projects/`}>Projects</a>
                 <a class="button" href={links.scholar}>Google Scholar</a>
                 <a class="button" href={links.github}>GitHub</a>
                 <a class="button" href={links.email}>Email</a>
@@ -220,7 +222,7 @@ const skills = [
             </div>
             <figure class="hero-card">
               <img
-                src="/assets/coffee-multimodal-hero.png"
+                src={`${import.meta.env.BASE_URL}assets/coffee-multimodal-hero.png`}
                 alt="Coffee beans, acoustic waveform, and multimodal AI nodes"
                 loading="eager"
               />
@@ -315,7 +317,7 @@ const skills = [
                   a coffee plant growth chamber, and a modified hot-air coffee roaster.
                 </p>
                 <div class="link-row">
-                  <a class="pill link" href="/projects/">View Projects</a>
+                  <a class="pill link" href={`${base}projects/`}>View Projects</a>
                 </div>
               </article>
             </div>
