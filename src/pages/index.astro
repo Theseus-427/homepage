@@ -1,0 +1,406 @@
+---
+import "../styles/global.css";
+
+const links = {
+  github: "https://github.com/Theseus-427",
+  scholar: "https://scholar.google.com/citations?user=2k6kUakAAAAJ&hl=zh-CN",
+  orcid: "https://orcid.org/0009-0003-7347-6296",
+  arxivBard: "https://arxiv.org/abs/2604.16514",
+  bardRepo: "https://github.com/fudan-generative-vision/Bard-VL",
+  coffeePaper: "https://www.sciencedirect.com/science/article/pii/S2772502226003987",
+  coffeeDoi: "https://doi.org/10.1016/j.afres.2026.102058",
+  email: "mailto:theseus@njfu.edu.cn"
+};
+
+const interests = [
+  {
+    title: "Multimodal AI for Coffee Research",
+    text: "Using visual, acoustic, and language-based signals to study coffee quality, roasting dynamics, and sensory intelligence."
+  },
+  {
+    title: "AI for Food Science",
+    text: "Building computational tools that support food quality assessment, process monitoring, and data-driven food research."
+  },
+  {
+    title: "Vision-Language Models",
+    text: "Exploring efficient multimodal models and their adaptation to scientific and domain-specific visual reasoning tasks."
+  },
+  {
+    title: "Food Data Intelligence",
+    text: "Organizing food-related data through machine learning, knowledge extraction, retrieval systems, and structured analysis."
+  }
+];
+
+const publications = [
+  {
+    status: "Published · Applied Food Research · 2026",
+    title:
+      "Augmenting Sensory Perception in Coffee Roasting Automation: A Machine Learning Framework for Acoustic-Based Crack Detection",
+    authors: "Haojun Shi, Zhijian Li, Weizu Yu, and Wenmeng He",
+    text:
+      "Develops an acoustic sensing and machine learning framework for detecting crack events during coffee roasting, supporting more objective and automated sensory monitoring in coffee processing.",
+    links: [
+      { label: "DOI", href: links.coffeeDoi },
+      { label: "ScienceDirect", href: links.coffeePaper }
+    ],
+    tags: ["Coffee roasting", "Acoustic sensing", "Machine learning", "Food quality"]
+  },
+  {
+    status: "arXiv · Under Review · 2026",
+    title:
+      "BARD: Bridging AutoRegressive and Diffusion Vision-Language Models Via Highly Efficient Progressive Block Merging and Stage-Wise Distillation",
+    authors:
+      "Baoyou Chen, Hanchen Xia, Peng Tu, Haojun Shi, Liwei Zhang, Weihao Yuan, and Siyu Zhu",
+    text:
+      "Studies efficient conversion from autoregressive vision-language models to diffusion VLMs through progressive block merging and stage-wise distillation, improving decoding efficiency while preserving multimodal capability.",
+    links: [
+      { label: "arXiv", href: links.arxivBard },
+      { label: "Code", href: links.bardRepo }
+    ],
+    tags: ["Vision-language models", "Diffusion VLMs", "Distillation", "Efficient inference"]
+  }
+];
+
+const projects = [
+  {
+    title: "Coffee Roasting Acoustic Analysis",
+    meta: "Food science · Acoustic sensing · ML",
+    text:
+      "Developed an acoustic sensing and machine learning framework for detecting crack events during coffee roasting using signal processing, Mel spectrograms, MFCC features, CNNs, and Random Forest models.",
+    tags: ["Coffee", "MFCC", "CNN", "Random Forest"],
+    featured: true
+  },
+  {
+    title: "BARD-VL",
+    meta: "Multimodal AI · Research",
+    text:
+      "Contributed to a framework that bridges autoregressive and diffusion vision-language models through progressive block merging and stage-wise distillation.",
+    tags: ["VLM", "Diffusion", "arXiv"],
+    links: [
+      { label: "arXiv", href: links.arxivBard },
+      { label: "GitHub", href: links.bardRepo }
+    ],
+    featured: true
+  },
+  {
+    title: "Shanghai Local Gazetteers Knowledge Graph",
+    meta: "Domain knowledge extraction",
+    text:
+      "Built a knowledge graph pipeline for multi-period Shanghai local gazetteers, transforming historical texts into structured entities and visualized relations.",
+    tags: ["Knowledge graph", "Information extraction", "Visualization"]
+  },
+  {
+    title: "Food Delivery Behavior & Supply Chain Analysis",
+    meta: "Food systems analytics",
+    text:
+      "Analyzed 12,000+ food delivery records to study consumption behavior, delivery efficiency, promotion rules, and scheduling strategies.",
+    tags: ["Pandas", "Statistics", "Supply chain"]
+  }
+];
+
+const experiences = [
+  {
+    role: "Researcher / Data Scientist",
+    org: "Shanghai Academy of AI for Science",
+    date: "2025-2026",
+    text:
+      "Work on multimodal AI, large-scale data pipelines, and applied machine learning systems, with projects spanning vision-language modeling, domain-specific data curation, and scientific AI applications."
+  },
+  {
+    role: "Machine Learning Model Development",
+    org: "Hunan Sandouke Coffee Co., Ltd.",
+    date: "2025",
+    text:
+      "Developed models for acoustic analysis of coffee roasting, applying feature engineering and machine learning to detect key crack stages under industrial noise."
+  }
+];
+
+const education = [
+  {
+    school: "Hong Kong Baptist University",
+    degree: "MSc in Data Science",
+    date: "2024-2025",
+    text: "Coursework includes regression analysis, machine learning, deep learning, Python, R, and SQL databases."
+  },
+  {
+    school: "Nanjing Forestry University",
+    degree: "BSc in Computer Science and Technology",
+    date: "2020-2024",
+    text: "Coursework includes C/C++, Python, data structures, SQL databases, and embedded development."
+  }
+];
+
+const skills = [
+  "Python",
+  "TypeScript",
+  "SQL",
+  "R",
+  "Machine Learning",
+  "CNNs",
+  "Random Forests",
+  "Vision-Language Models",
+  "Diffusion VLMs",
+  "Model Distillation",
+  "Mel Spectrograms",
+  "MFCCs",
+  "RAG",
+  "Knowledge Graphs",
+  "Data Pipelines"
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Haojun Shi is a Researcher / Data Scientist exploring AI for food science, coffee-related multimodal learning, acoustic sensing, and vision-language models."
+    />
+    <title>Haojun Shi · AI for Food Science</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="/">Haojun Shi</a>
+          <div class="nav-links">
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="/projects/">Projects</a>
+            <a href="/cv/">CV</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-grid">
+            <div>
+              <p class="eyebrow">AI for Food Science · Multimodal Learning</p>
+              <h1 id="hero-title">Haojun Shi</h1>
+              <p class="hero-subtitle">
+                Researcher / Data Scientist exploring coffee-focused multimodal AI.
+              </p>
+              <p class="hero-copy">
+                I am a Researcher / Data Scientist at Shanghai Academy of AI for
+                Science, with a background in computer science, data science, and
+                applied AI. I am interested in PhD research at the intersection of
+                food science and computer science, especially coffee-related vision,
+                acoustic sensing, multimodal learning, and intelligent food systems.
+              </p>
+              <div class="profile-facts" aria-label="Profile summary">
+                <div>
+                  <span>Current</span>
+                  <strong>Researcher / Data Scientist</strong>
+                  <em>Shanghai Academy of AI for Science</em>
+                </div>
+                <div>
+                  <span>PhD Direction</span>
+                  <strong>Food Science + Computer Science</strong>
+                  <em>Coffee, sensing, vision, multimodal AI</em>
+                </div>
+                <div>
+                  <span>Research Base</span>
+                  <strong>2 papers · applied systems</strong>
+                  <em>Applied Food Research, arXiv VLM work</em>
+                </div>
+              </div>
+              <div class="actions" aria-label="Profile links">
+                <a class="button primary" href="#publications">View Publications</a>
+                <a class="button" href="/cv/">CV</a>
+                <a class="button" href="/projects/">Projects</a>
+                <a class="button" href={links.scholar}>Google Scholar</a>
+                <a class="button" href={links.github}>GitHub</a>
+                <a class="button" href={links.email}>Email</a>
+              </div>
+            </div>
+            <figure class="hero-card">
+              <img
+                src="/assets/coffee-multimodal-hero.png"
+                alt="Coffee beans, acoustic waveform, and multimodal AI nodes"
+                loading="eager"
+              />
+              <figcaption class="hero-card-caption">
+                <span>Research direction</span>
+                <span class="metric">Coffee · Sensing · VLMs</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section" id="research" aria-labelledby="research-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="research-title">Research</h2>
+              <p>Food science questions through computational methods.</p>
+            </div>
+            <div>
+              <p class="lead">
+                My research interests center on AI for food science, especially
+                coffee as a rich domain for multimodal sensing, quality control,
+                sensory analysis, and intelligent processing.
+              </p>
+              <div class="interest-grid">
+                {interests.map((item) => (
+                  <article class="tile">
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="publications" aria-labelledby="publications-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="publications-title">Publications</h2>
+              <p>Published work and current preprints.</p>
+            </div>
+            <div>
+              {publications.map((pub) => (
+                <article class="publication">
+                  <div class="pub-meta">{pub.status}</div>
+                  <h3>{pub.title}</h3>
+                  <p class="authors">{pub.authors}</p>
+                  <p>{pub.text}</p>
+                  <div class="link-row">
+                    {pub.links.map((link) => (
+                      <a class="pill link" href={link.href}>{link.label}</a>
+                    ))}
+                  </div>
+                  <div class="tag-row">
+                    {pub.tags.map((tag) => <span class="pill">{tag}</span>)}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="projects" aria-labelledby="projects-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="projects-title">Projects</h2>
+              <p>Selected work connecting AI systems and domain problems.</p>
+            </div>
+            <div class="project-grid">
+              {projects.map((project) => (
+                <article class:list={["entry", { featured: project.featured }]}>
+                  <div class="entry-meta">{project.meta}</div>
+                  <h3>{project.title}</h3>
+                  <p>{project.text}</p>
+                  {project.links && (
+                    <div class="link-row">
+                      {project.links.map((link) => (
+                        <a class="pill link" href={link.href}>{link.label}</a>
+                      ))}
+                    </div>
+                  )}
+                  <div class="tag-row">
+                    {project.tags.map((tag) => <span class="pill">{tag}</span>)}
+                  </div>
+                </article>
+              ))}
+              <article class="entry">
+                <div class="entry-meta">Coffee hardware · In progress</div>
+                <h3>Coffee Science Lab Projects</h3>
+                <p>
+                  Hands-on coffee science builds including a coffee machine system,
+                  a coffee plant growth chamber, and a modified hot-air coffee roaster.
+                </p>
+                <div class="link-row">
+                  <a class="pill link" href="/projects/">View Projects</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="experience" aria-labelledby="experience-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="experience-title">Experience</h2>
+              <p>Research and applied AI work.</p>
+            </div>
+            <div class="timeline">
+              {experiences.map((item) => (
+                <article class="entry">
+                  <div class="entry-meta">{item.date}</div>
+                  <h3>{item.role}</h3>
+                  <p class="authors">{item.org}</p>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="education" aria-labelledby="education-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="education-title">Education</h2>
+              <p>Computer science and data science background.</p>
+            </div>
+            <div class="two-column">
+              {education.map((item) => (
+                <article class="entry">
+                  <div class="entry-meta">{item.date}</div>
+                  <h3>{item.school}</h3>
+                  <p class="authors">{item.degree}</p>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="skills" aria-labelledby="skills-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="skills-title">Skills</h2>
+              <p>Methods and tools I use.</p>
+            </div>
+            <div class="skill-list">
+              {skills.map((skill) => <span class="pill">{skill}</span>)}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="contact" aria-labelledby="contact-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="contact-title">Contact</h2>
+              <p>For PhD opportunities and research collaboration.</p>
+            </div>
+            <div class="contact-panel">
+              <h3>Interested in AI for food science and coffee research.</h3>
+              <p>
+                I am looking for PhD opportunities and collaborations around
+                computational food science, coffee-focused multimodal AI, visual
+                quality assessment, acoustic sensing, and domain-specific AI systems.
+              </p>
+              <div class="actions">
+                <a class="button" href={links.email}>Email</a>
+                <a class="button" href={links.scholar}>Google Scholar</a>
+                <a class="button" href={links.orcid}>ORCID</a>
+                <a class="button" href={links.github}>GitHub</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          © 2026 Haojun Shi. Built as a static academic homepage.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

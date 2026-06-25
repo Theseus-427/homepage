@@ -1,0 +1,176 @@
+---
+import "../styles/global.css";
+
+const links = {
+  home: "/",
+  cv: "/cv/",
+  email: "mailto:theseus@njfu.edu.cn",
+  coffeeDoi: "https://doi.org/10.1016/j.afres.2026.102058",
+  arxivBard: "https://arxiv.org/abs/2604.16514",
+  bardRepo: "https://github.com/fudan-generative-vision/Bard-VL"
+};
+
+const coffeeProjects = [
+  {
+    title: "Coffee Machine System",
+    status: "Coffee science system · Planned detail page",
+    text:
+      "A personal coffee machine system for experimenting with brewing control, sensing, and repeatable coffee preparation workflows. This can become a strong project once we add photos, architecture, sensors, control logic, and evaluation notes.",
+    tags: ["Brewing system", "Sensors", "Control", "Data logging"]
+  },
+  {
+    title: "Coffee Plant Growth Chamber",
+    status: "Plant growth environment · Planned detail page",
+    text:
+      "A controlled chamber for coffee plant cultivation experiments, potentially covering temperature, humidity, light, irrigation, and environmental monitoring for coffee growth research.",
+    tags: ["Coffee plant", "Growth chamber", "Environment control", "Monitoring"]
+  },
+  {
+    title: "Modified Hot-Air Coffee Roaster",
+    status: "Roasting hardware · Planned detail page",
+    text:
+      "A modified hot-air roasting setup for coffee roasting experiments, suitable for connecting roast curves, acoustic crack detection, visual bean changes, and repeatable small-batch profiling.",
+    tags: ["Hot-air roasting", "Roast profiling", "Acoustic crack", "Coffee quality"]
+  }
+];
+
+const researchProjects = [
+  {
+    title: "Coffee Roasting Acoustic Analysis",
+    status: "Published research · Applied Food Research",
+    text:
+      "Machine learning framework for acoustic-based crack detection during coffee roasting, supporting automated sensory monitoring and quality control.",
+    tags: ["Coffee roasting", "Acoustic sensing", "Machine learning"],
+    links: [{ label: "DOI", href: links.coffeeDoi }]
+  },
+  {
+    title: "BARD-VL",
+    status: "Multimodal AI · arXiv",
+    text:
+      "Framework for bridging autoregressive and diffusion vision-language models using progressive block merging and stage-wise distillation.",
+    tags: ["Vision-language models", "Diffusion VLMs", "Distillation"],
+    links: [
+      { label: "arXiv", href: links.arxivBard },
+      { label: "Code", href: links.bardRepo }
+    ]
+  }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Projects by Haojun Shi, including coffee science hardware builds, coffee roasting acoustic analysis, and multimodal AI research."
+    />
+    <title>Projects · Haojun Shi</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href={links.home}>Haojun Shi</a>
+          <div class="nav-links">
+            <a href={links.home}>Home</a>
+            <a href={links.cv}>CV</a>
+            <a href="#coffee-lab">Coffee Lab</a>
+            <a href="#research-projects">Research</a>
+            <a href={links.email}>Email</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <p class="eyebrow">Projects</p>
+          <h1>Coffee Science & Multimodal AI</h1>
+          <p class="hero-subtitle">
+            A project gallery for research work and hands-on coffee science
+            systems, from acoustic roasting analysis to coffee hardware builds.
+          </p>
+          <p class="hero-copy">
+            This page is intentionally structured as a growing lab notebook. The
+            first version highlights the project directions; later versions can
+            add photos, system diagrams, datasets, evaluation results, and build
+            logs for each coffee project.
+          </p>
+        </section>
+
+        <section class="section" id="coffee-lab" aria-labelledby="coffee-lab-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="coffee-lab-title">Coffee Lab</h2>
+              <p>Hands-on systems for coffee science.</p>
+            </div>
+            <div class="project-grid">
+              {coffeeProjects.map((project) => (
+                <article class="entry">
+                  <div class="entry-meta">{project.status}</div>
+                  <h3>{project.title}</h3>
+                  <p>{project.text}</p>
+                  <div class="tag-row">
+                    {project.tags.map((tag) => <span class="pill">{tag}</span>)}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="research-projects" aria-labelledby="research-projects-title">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2 id="research-projects-title">Research</h2>
+              <p>Current research and publication-backed work.</p>
+            </div>
+            <div class="project-grid">
+              {researchProjects.map((project) => (
+                <article class="entry featured">
+                  <div class="entry-meta">{project.status}</div>
+                  <h3>{project.title}</h3>
+                  <p>{project.text}</p>
+                  <div class="link-row">
+                    {project.links.map((link) => (
+                      <a class="pill link" href={link.href}>{link.label}</a>
+                    ))}
+                  </div>
+                  <div class="tag-row">
+                    {project.tags.map((tag) => <span class="pill">{tag}</span>)}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-inner">
+            <div class="section-label">
+              <h2>Next Details</h2>
+              <p>What each project page should eventually include.</p>
+            </div>
+            <div class="two-column">
+              <article class="tile">
+                <h3>For coffee hardware</h3>
+                <p>
+                  Photos, goals, system diagram, parts list, sensors, control
+                  logic, data collected, failure cases, and next iteration.
+                </p>
+              </article>
+              <article class="tile">
+                <h3>For research projects</h3>
+                <p>
+                  Problem statement, method, dataset, metrics, contribution,
+                  paper/code links, and relevance to PhD research interests.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

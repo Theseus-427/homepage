@@ -1,0 +1,213 @@
+---
+import "../styles/global.css";
+
+const links = {
+  home: "/",
+  projects: "/projects/",
+  github: "https://github.com/Theseus-427",
+  scholar: "https://scholar.google.com/citations?user=2k6kUakAAAAJ&hl=zh-CN",
+  orcid: "https://orcid.org/0009-0003-7347-6296",
+  coffeeDoi: "https://doi.org/10.1016/j.afres.2026.102058",
+  arxivBard: "https://arxiv.org/abs/2604.16514",
+  bardRepo: "https://github.com/fudan-generative-vision/Bard-VL",
+  email: "mailto:theseus@njfu.edu.cn"
+};
+
+const skills = [
+  "Python",
+  "SQL",
+  "R",
+  "TypeScript",
+  "Pandas",
+  "Scikit-learn",
+  "CNNs",
+  "Random Forests",
+  "VLMs",
+  "Diffusion VLMs",
+  "Distillation",
+  "MFCCs",
+  "RAG",
+  "Knowledge Graphs",
+  "Data Pipelines"
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="One-page academic CV for Haojun Shi, Researcher / Data Scientist working on AI for food science, coffee research, and multimodal learning."
+    />
+    <title>CV · Haojun Shi</title>
+  </head>
+  <body class="cv-page">
+    <a class="cv-back" href={links.home}>Haojun Shi</a>
+    <button class="cv-download" type="button" onclick="window.print()">
+      Download PDF
+    </button>
+
+    <main class="cv-viewport">
+      <article class="cv-sheet" aria-label="Haojun Shi CV">
+        <header class="cv-header">
+          <div>
+            <p class="cv-kicker">Academic CV</p>
+            <h1>Haojun Shi</h1>
+            <p class="cv-title">
+              Researcher / Data Scientist · AI for Food Science · Multimodal AI
+            </p>
+          </div>
+          <div class="cv-contact">
+            <a href={links.email}>theseus@njfu.edu.cn</a>
+            <a href={links.scholar}>Google Scholar</a>
+            <a href={links.orcid}>ORCID</a>
+            <a href={links.github}>GitHub</a>
+          </div>
+        </header>
+
+        <section class="cv-summary">
+          <h2>Research Interests</h2>
+          <p>
+            AI for food science, computational coffee research, multimodal
+            sensing, visual quality assessment, acoustic analysis for food
+            processing, and efficient vision-language models for scientific
+            applications.
+          </p>
+        </section>
+
+        <div class="cv-grid">
+          <div class="cv-main">
+            <section class="cv-section">
+              <h2>Publications</h2>
+              <div class="cv-item">
+                <p class="cv-item-title">
+                  Augmenting Sensory Perception in Coffee Roasting Automation:
+                  A Machine Learning Framework for Acoustic-Based Crack Detection
+                </p>
+                <p>
+                  <strong>Haojun Shi</strong>, Zhijian Li, Weizu Yu, and Wenmeng He.
+                  <em>Applied Food Research</em>, 2026.
+                  <a href={links.coffeeDoi}>doi.org/10.1016/j.afres.2026.102058</a>
+                </p>
+              </div>
+              <div class="cv-item">
+                <p class="cv-item-title">
+                  BARD: Bridging AutoRegressive and Diffusion Vision-Language
+                  Models Via Highly Efficient Progressive Block Merging and
+                  Stage-Wise Distillation
+                </p>
+                <p>
+                  Baoyou Chen, Hanchen Xia, Peng Tu, <strong>Haojun Shi</strong>,
+                  Liwei Zhang, Weihao Yuan, and Siyu Zhu. arXiv:2604.16514,
+                  2026. Under review.
+                </p>
+              </div>
+            </section>
+
+            <section class="cv-section">
+              <h2>Research & Experience</h2>
+              <div class="cv-item">
+                <div class="cv-line">
+                  <p class="cv-item-title">Researcher / Data Scientist</p>
+                  <span>2025-2026</span>
+                </div>
+                <p class="cv-place">Shanghai Academy of AI for Science</p>
+                <p>
+                  Work on multimodal AI, large-scale data pipelines, and applied
+                  machine learning systems, including vision-language modeling,
+                  domain-specific data curation, and scientific AI applications.
+                </p>
+              </div>
+              <div class="cv-item">
+                <div class="cv-line">
+                  <p class="cv-item-title">Machine Learning Model Development</p>
+                  <span>2025</span>
+                </div>
+                <p class="cv-place">Hunan Sandouke Coffee Co., Ltd.</p>
+                <p>
+                  Developed acoustic analysis models for coffee roasting, using
+                  signal processing and machine learning to detect key crack
+                  stages under industrial noise.
+                </p>
+              </div>
+            </section>
+
+            <section class="cv-section">
+              <h2>Selected Projects</h2>
+              <div class="cv-item compact">
+                <p class="cv-item-title">Coffee Roasting Acoustic Analysis</p>
+                <p>
+                  Acoustic sensing and ML for coffee roasting crack detection
+                  using Mel spectrograms, MFCC features, CNNs, and Random Forests.
+                </p>
+              </div>
+              <div class="cv-item compact">
+                <p class="cv-item-title">BARD-VL</p>
+                <p>
+                  Efficient diffusion VLM framework using progressive block
+                  merging and stage-wise distillation.
+                </p>
+              </div>
+              <div class="cv-item compact">
+                <p class="cv-item-title">Coffee Science Hardware Projects</p>
+                <p>
+                  Personal coffee science builds: coffee machine system, coffee
+                  plant growth chamber, and modified hot-air coffee roaster.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="cv-side">
+            <section class="cv-section">
+              <h2>Education</h2>
+              <div class="cv-item">
+                <div class="cv-line">
+                  <p class="cv-item-title">Hong Kong Baptist University</p>
+                  <span>2024-2025</span>
+                </div>
+                <p>MSc in Data Science</p>
+              </div>
+              <div class="cv-item">
+                <div class="cv-line">
+                  <p class="cv-item-title">Nanjing Forestry University</p>
+                  <span>2020-2024</span>
+                </div>
+                <p>BSc in Computer Science and Technology</p>
+              </div>
+            </section>
+
+            <section class="cv-section">
+              <h2>Technical Skills</h2>
+              <div class="cv-skill-list">
+                {skills.map((skill) => <span>{skill}</span>)}
+              </div>
+            </section>
+
+            <section class="cv-section">
+              <h2>Methods</h2>
+              <ul class="cv-list">
+                <li>Acoustic event detection for coffee roasting</li>
+                <li>Vision-language model adaptation and evaluation</li>
+                <li>Domain-specific data cleaning and knowledge extraction</li>
+                <li>Food data analytics and scientific AI workflows</li>
+              </ul>
+            </section>
+
+            <section class="cv-section">
+              <h2>Links</h2>
+              <ul class="cv-list">
+                <li><a href={links.projects}>Project Gallery</a></li>
+                <li><a href={links.arxivBard}>BARD arXiv</a></li>
+                <li><a href={links.bardRepo}>BARD Code</a></li>
+                <li><a href={links.coffeeDoi}>Coffee Paper DOI</a></li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
