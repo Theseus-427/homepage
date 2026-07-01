@@ -29,10 +29,11 @@ const coffeeProjects = [
   },
   {
     title: "Modified Hot-Air Coffee Roaster",
-    status: "Roasting hardware · Planned detail page",
+    status: "Roasting hardware · Featured project",
     text:
-      "A modified hot-air roasting setup for coffee roasting experiments, suitable for connecting roast curves, acoustic crack detection, visual bean changes, and repeatable small-batch profiling.",
-    tags: ["Hot-air roasting", "Roast profiling", "Acoustic crack", "Coffee quality"]
+      "A popcorn machine conversion built into a controllable hot-air coffee roaster with chamber sensing, airflow control, heater regulation, and a clear path toward repeatable roast profiling.",
+    tags: ["Hot-air roasting", "Roast profiling", "Acoustic crack", "Coffee quality"],
+    links: [{ label: "View Project", href: `${base}projects/hot-air-coffee-roaster/` }]
   }
 ];
 
@@ -113,6 +114,13 @@ const researchProjects = [
                   <div class="entry-meta">{project.status}</div>
                   <h3>{project.title}</h3>
                   <p>{project.text}</p>
+                  {project.links && (
+                    <div class="link-row">
+                      {project.links.map((link) => (
+                        <a class="pill link" href={link.href}>{link.label}</a>
+                      ))}
+                    </div>
+                  )}
                   <div class="tag-row">
                     {project.tags.map((tag) => <span class="pill">{tag}</span>)}
                   </div>

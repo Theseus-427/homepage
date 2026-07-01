@@ -1,0 +1,165 @@
+---
+import "../../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+
+const links = {
+  home: base,
+  projects: `${base}projects/`,
+  cv: `${base}cv/`,
+  email: "mailto:theseus@njfu.edu.cn",
+  coffeeDoi: "https://doi.org/10.1016/j.afres.2026.102058"
+};
+
+const asset = (name: string) => `${base}assets/hot-air-roaster/${name}`;
+
+const features = [
+  {
+    title: "Sensor Array",
+    text: "Monitors roast temperature and chamber conditions for more observable small-batch experiments."
+  },
+  {
+    title: "Modified Fan System",
+    text: "Improves airflow consistency so the roast chamber can behave more predictably."
+  },
+  {
+    title: "PWM Fan Control",
+    text: "Adds fine fan-speed control for shaping roast profiles and airflow response."
+  },
+  {
+    title: "Heater Power Regulation",
+    text: "Uses DC voltage control to make heating power adjustable during roasting."
+  }
+];
+
+const goals = [
+  "Stable airflow",
+  "Adjustable heat",
+  "Repeatable roast profiling"
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A modified hot-air coffee roaster project by Haojun Shi, converting a popcorn machine into a controllable small-batch roasting platform."
+    />
+    <title>DIY Hot-Air Coffee Roaster · Haojun Shi</title>
+  </head>
+  <body>
+    <div class="site-shell roaster-page">
+      <header class="topbar">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href={links.home}>Haojun Shi</a>
+          <div class="nav-links">
+            <a href={links.home}>Home</a>
+            <a href={links.projects}>Projects</a>
+            <a href={links.cv}>CV</a>
+            <a href="#system">System</a>
+            <a href="#research-link">Research</a>
+            <a href={links.email}>Email</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="roaster-hero" aria-labelledby="roaster-title">
+          <div class="roaster-hero-copy">
+            <p class="eyebrow">Popcorn Machine Conversion</p>
+            <h1 id="roaster-title">DIY Hot-Air Coffee Roaster</h1>
+            <p>
+              A popcorn machine, re-engineered for precision coffee roasting.
+            </p>
+          </div>
+          <figure class="roaster-hero-media">
+            <img
+              src={asset("hero-reference.png")}
+              alt="DIY hot-air coffee roaster with sensor, fan, PWM, and heater control callouts"
+              loading="eager"
+            />
+          </figure>
+        </section>
+
+        <section class="roaster-intro" aria-labelledby="overview-title">
+          <div class="roaster-intro-copy">
+            <p class="eyebrow">Product Overview</p>
+            <h2 id="overview-title">Small-batch roasting, made observable.</h2>
+            <p>
+              This build converts a compact popcorn machine into a hot-air coffee
+              roasting platform for controlled experiments. The system brings
+              together airflow adjustment, heater regulation, and chamber sensing
+              so roast behavior can be studied, repeated, and connected to data.
+            </p>
+          </div>
+          <figure class="roaster-product-shot">
+            <img
+              src={asset("prototype.png")}
+              alt="Front view of the modified hot-air coffee roaster prototype"
+              loading="lazy"
+            />
+          </figure>
+        </section>
+
+        <section class="roaster-feature-band" id="system" aria-labelledby="system-title">
+          <div class="roaster-section-heading">
+            <p class="eyebrow">Feature System</p>
+            <h2 id="system-title">Four hardware changes. One clearer roast.</h2>
+          </div>
+          <div class="roaster-feature-grid">
+            {features.map((feature) => (
+              <article class="roaster-feature">
+                <h3>{feature.title}</h3>
+                <p>{feature.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="roaster-diagram" aria-labelledby="diagram-title">
+          <div class="roaster-diagram-copy">
+            <p class="eyebrow">Modification Diagram</p>
+            <h2 id="diagram-title">Designed around control points.</h2>
+            <p>
+              The modification keeps the roast chamber visible while exposing the
+              control electronics. Sensors, fan control, and heater regulation
+              become part of the experimental interface instead of hidden machine
+              behavior.
+            </p>
+            <div class="roaster-goals" aria-label="Design goals">
+              {goals.map((goal) => <span>{goal}</span>)}
+            </div>
+          </div>
+          <figure class="roaster-diagram-media">
+            <img
+              src={asset("modification-diagram.png")}
+              alt="Annotated modification diagram showing sensors, fan control, and heater regulation"
+              loading="lazy"
+            />
+          </figure>
+        </section>
+
+        <section class="roaster-research" id="research-link" aria-labelledby="research-title">
+          <div>
+            <p class="eyebrow">Research Link</p>
+            <h2 id="research-title">A hardware bridge to roast intelligence.</h2>
+          </div>
+          <p>
+            The roaster supports coffee experiments where roast curves, visual
+            bean changes, acoustic crack events, and repeatable small-batch
+            profiles can be studied together. It connects directly to my coffee
+            roasting acoustic analysis work on crack detection and automated
+            sensory monitoring.
+          </p>
+          <div class="actions">
+            <a class="button primary" href={links.coffeeDoi}>Read the Paper</a>
+            <a class="button" href={links.projects}>Back to Projects</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
